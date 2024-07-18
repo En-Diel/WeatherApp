@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -67,4 +69,22 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Dagger Hilt
+    implementation (libs.hilt.android)
+    kapt (libs.hilt.compiler)
+    implementation (libs.androidx.hilt.lifecycle.viewmodel)
+    kapt (libs.androidx.hilt.compiler)
+    implementation (libs.androidx.hilt.navigation.compose)
+
+    // Location
+    implementation (libs.play.services.location)
+
+    // Retrofit
+    implementation (libs.retrofit)
+    implementation (libs.retrofit2.converter.moshi)
+    //kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
+
+    //implementation (libs.converter.moshi)
+    implementation (libs.logging.interceptor)
 }
