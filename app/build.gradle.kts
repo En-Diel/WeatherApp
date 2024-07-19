@@ -73,9 +73,8 @@ dependencies {
     // Dagger Hilt
     implementation (libs.hilt.android)
     kapt (libs.hilt.compiler)
-    implementation (libs.androidx.hilt.lifecycle.viewmodel)
-    kapt (libs.androidx.hilt.compiler)
-    implementation (libs.androidx.hilt.navigation.compose)
+    //kapt (libs.androidx.hilt.compiler)
+    //implementation (libs.androidx.hilt.navigation.compose)
 
     // Location
     implementation (libs.play.services.location)
