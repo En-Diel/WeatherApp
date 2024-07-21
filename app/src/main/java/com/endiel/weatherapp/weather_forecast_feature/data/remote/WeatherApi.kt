@@ -4,8 +4,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WeatherApi {
-    @GET("v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,pressure_msl," +
-            "wind_speed_10m,weather_code,relative_humidity_2m,pressure_msl")
+    @GET("v1/forecast?hourly=temperature_2m,pressure_msl,wind_speed_10m,weather_code,relative_humidity_2m,pressure_msl")
     suspend fun getWeatherData(
         @Query("latitude") lat: Double,
         @Query("longitude") long: Double
